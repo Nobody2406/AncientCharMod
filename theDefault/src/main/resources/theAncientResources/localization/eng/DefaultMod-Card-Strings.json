@@ -49,5 +49,9 @@
   "theAncient:OrbSkill": {
     "NAME": "Get Orb",
     "DESCRIPTION": "Channel 1 Default Orb."
+  },
+  "theAncient:TestCard": {
+    "NAME": "Test",
+    "DESCRIPTION": "Deal !D! damage."
   }
 }

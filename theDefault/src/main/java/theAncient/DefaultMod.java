@@ -21,7 +21,7 @@ import com.megacrit.cardcrawl.unlock.UnlockTracker;
 import org.apache.logging.log4j.LogManager;
 import org.apache.logging.log4j.Logger;
 import theAncient.cards.*;
-import theAncient.characters.TheDefault;
+import theAncient.characters.TheAncient;
 import theAncient.events.IdentityCrisisEvent;
 import theAncient.potions.PlaceholderPotion;
 import theAncient.relics.BottledPlaceholderRelic;
@@ -87,14 +87,14 @@ public class DefaultMod implements
 
     //This is for the in-game mod settings panel.
     private static final String MODNAME = "Default Mod";
-    private static final String AUTHOR = "Gremious"; // And pretty soon - You!
-    private static final String DESCRIPTION = "A base for Slay the Spire to start your own mod from, feat. the Default.";
+    private static final String AUTHOR = "Nobody"; // And pretty soon - You!
+    private static final String DESCRIPTION = "A base for Slay the Spire to start your own mod from, feat. the Ancient.";
     
     // =============== INPUT TEXTURE LOCATION =================
     
     // Colors (RGB)
     // Character Color
-    public static final Color DEFAULT_GRAY = CardHelper.getColor(64.0f, 70.0f, 70.0f);
+    public static final Color ANCIENT_YELLOW = CardHelper.getColor(250, 200, 75);
     
     // Potion Colors in RGB
     public static final Color PLACEHOLDER_POTION_LIQUID = CardHelper.getColor(209.0f, 53.0f, 18.0f); // Orange-ish Red
@@ -201,11 +201,10 @@ public class DefaultMod implements
         // Change their locations to reflect your actual ID rather than theDefault. They get loaded before getID is a thing.
         
         logger.info("Done subscribing");
+
+        logger.info("Creating the color " + TheAncient.Enums.COLOR_ANCIENT_YELLOW.toString());
         
-        logger.info("Creating the color " + TheDefault.Enums.COLOR_GRAY.toString());
-        
-        BaseMod.addColor(TheDefault.Enums.COLOR_GRAY, DEFAULT_GRAY, DEFAULT_GRAY, DEFAULT_GRAY,
-                DEFAULT_GRAY, DEFAULT_GRAY, DEFAULT_GRAY, DEFAULT_GRAY,
+        BaseMod.addColor(TheAncient.Enums.COLOR_ANCIENT_YELLOW, ANCIENT_YELLOW,
                 ATTACK_DEFAULT_GRAY, SKILL_DEFAULT_GRAY, POWER_DEFAULT_GRAY, ENERGY_ORB_DEFAULT_GRAY,
                 ATTACK_DEFAULT_GRAY_PORTRAIT, SKILL_DEFAULT_GRAY_PORTRAIT, POWER_DEFAULT_GRAY_PORTRAIT,
                 ENERGY_ORB_DEFAULT_GRAY_PORTRAIT, CARD_ENERGY_ORB);
@@ -286,13 +285,13 @@ public class DefaultMod implements
     
     @Override
     public void receiveEditCharacters() {
-        logger.info("Beginning to edit characters. " + "Add " + TheDefault.Enums.THE_DEFAULT.toString());
+        logger.info("Beginning to edit characters. " + "Add " + TheAncient.Enums.THE_ANCIENT.toString());
         
-        BaseMod.addCharacter(new TheDefault("the Default", TheDefault.Enums.THE_DEFAULT),
-                THE_DEFAULT_BUTTON, THE_DEFAULT_PORTRAIT, TheDefault.Enums.THE_DEFAULT);
+        BaseMod.addCharacter(new TheAncient("the Ancient", TheAncient.Enums.THE_ANCIENT),
+                THE_DEFAULT_BUTTON, THE_DEFAULT_PORTRAIT, TheAncient.Enums.THE_ANCIENT);
         
         receiveEditPotions();
-        logger.info("Added " + TheDefault.Enums.THE_DEFAULT.toString());
+        logger.info("Added " + TheAncient.Enums.THE_ANCIENT.toString());
     }
     
     // =============== /LOAD THE CHARACTER/ =================
@@ -350,7 +349,7 @@ public class DefaultMod implements
         // Since this is a builder these method calls (outside of create()) can be skipped/added as necessary
         AddEventParams eventParams = new AddEventParams.Builder(IdentityCrisisEvent.ID, IdentityCrisisEvent.class) // for this specific event
             .dungeonID(TheCity.ID) // The dungeon (act) this event will appear in
-            .playerClass(TheDefault.Enums.THE_DEFAULT) // Character specific event
+            .playerClass(TheAncient.Enums.THE_ANCIENT) // Character specific event
             .create();
 
         // Add the event
@@ -370,7 +369,7 @@ public class DefaultMod implements
         // Class Specific Potion. If you want your potion to not be class-specific,
         // just remove the player class at the end (in this case the "TheDefaultEnum.THE_DEFAULT".
         // Remember, you can press ctrl+P inside parentheses like addPotions)
-        BaseMod.addPotion(PlaceholderPotion.class, PLACEHOLDER_POTION_LIQUID, PLACEHOLDER_POTION_HYBRID, PLACEHOLDER_POTION_SPOTS, PlaceholderPotion.POTION_ID, TheDefault.Enums.THE_DEFAULT);
+        BaseMod.addPotion(PlaceholderPotion.class, PLACEHOLDER_POTION_LIQUID, PLACEHOLDER_POTION_HYBRID, PLACEHOLDER_POTION_SPOTS, PlaceholderPotion.POTION_ID, TheAncient.Enums.THE_ANCIENT);
         
         logger.info("Done editing potions");
     }
@@ -392,9 +391,9 @@ public class DefaultMod implements
         // in order to automatically differentiate which pool to add the relic too.
 
         // This adds a character specific relic. Only when you play with the mentioned color, will you get this relic.
-        BaseMod.addRelicToCustomPool(new PlaceholderRelic(), TheDefault.Enums.COLOR_GRAY);
-        BaseMod.addRelicToCustomPool(new BottledPlaceholderRelic(), TheDefault.Enums.COLOR_GRAY);
-        BaseMod.addRelicToCustomPool(new DefaultClickableRelic(), TheDefault.Enums.COLOR_GRAY);
+        BaseMod.addRelicToCustomPool(new PlaceholderRelic(), TheAncient.Enums.COLOR_ANCIENT_YELLOW);
+        BaseMod.addRelicToCustomPool(new BottledPlaceholderRelic(), TheAncient.Enums.COLOR_ANCIENT_YELLOW);
+        BaseMod.addRelicToCustomPool(new DefaultClickableRelic(), TheAncient.Enums.COLOR_ANCIENT_YELLOW);
         
         // This adds a relic to the Shared pool. Every character can find this relic.
         BaseMod.addRelic(new PlaceholderRelic2(), RelicType.SHARED);
