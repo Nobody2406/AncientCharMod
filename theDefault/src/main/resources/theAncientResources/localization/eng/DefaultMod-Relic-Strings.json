@@ -30,5 +30,12 @@
       ".",
       "Select a card to bottle for "
     ]
+  },
+  "theAncient:InsigniaOfThePharaoh": {
+    "NAME": "Insignia of the Pharaoh",
+    "FLAVOR": "With the Insignia you are the rightful Pharaoh - the prestigious Ruler of Egypt.",
+    "DESCRIPTIONS": [
+      "At the start of each combat, gain 1 Prestige. NL At the start of each turn, gain 2 Prestige."
+    ]
   }
 }

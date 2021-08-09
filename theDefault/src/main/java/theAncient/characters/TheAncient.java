@@ -24,6 +24,7 @@ import org.apache.logging.log4j.Logger;
 import theAncient.DefaultMod;
 import theAncient.cards.*;
 import theAncient.relics.DefaultClickableRelic;
+import theAncient.relics.InsigniaOfThePharaoh;
 import theAncient.relics.PlaceholderRelic;
 import theAncient.relics.PlaceholderRelic2;
 
@@ -166,9 +167,10 @@ public class TheAncient extends CustomPlayer {
         retVal.add(DefaultCommonSkill.ID);
         retVal.add(DefaultCommonSkill.ID);
         retVal.add(DefaultCommonSkill.ID);
-        retVal.add(DefaultCommonSkill.ID);
 
-        retVal.add(OrbSkill.ID);
+        retVal.add(Proclamation.ID);
+
+        retVal.add(HumanShield.ID);
 
         return retVal;
     }
@@ -177,11 +179,9 @@ public class TheAncient extends CustomPlayer {
     public ArrayList<String> getStartingRelics() {
         ArrayList<String> retVal = new ArrayList<>();
 
-        retVal.add(PlaceholderRelic.ID);
+        retVal.add(InsigniaOfThePharaoh.ID);
 
-        // Mark relics as seen - makes it visible in the compendium immediately
-        // If you don't have this it won't be visible in the compendium until you see them in game
-        UnlockTracker.markRelicAsSeen(PlaceholderRelic.ID);
+        UnlockTracker.markRelicAsSeen(InsigniaOfThePharaoh.ID);
 
         return retVal;
     }

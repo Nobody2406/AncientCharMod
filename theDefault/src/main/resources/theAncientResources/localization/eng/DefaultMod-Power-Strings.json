@@ -6,5 +6,9 @@
 "theAncient:RarePower": {
         "NAME": "Placeholder Power",
         "DESCRIPTIONS": ["At the start of your turn, TOUCH #b", " enemy." , " enemies."]
-}
+},
+"theAncient:PrestigePower": {
+        "NAME": "Prestige",
+        "DESCRIPTIONS": ["You have #b", " Prestige. Gain 1 Mantra per 5 Prestige at the start of your turn. NL Take damage equal to negative Prestige at the end of your turn."]
+        }
 }

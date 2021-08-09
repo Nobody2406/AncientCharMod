@@ -24,10 +24,7 @@ import theAncient.cards.*;
 import theAncient.characters.TheAncient;
 import theAncient.events.IdentityCrisisEvent;
 import theAncient.potions.PlaceholderPotion;
-import theAncient.relics.BottledPlaceholderRelic;
-import theAncient.relics.DefaultClickableRelic;
-import theAncient.relics.PlaceholderRelic;
-import theAncient.relics.PlaceholderRelic2;
+import theAncient.relics.*;
 import theAncient.util.IDCheckDontTouchPls;
 import theAncient.util.TextureLoader;
 import theAncient.variables.DefaultCustomVariable;
@@ -394,6 +391,7 @@ public class DefaultMod implements
         BaseMod.addRelicToCustomPool(new PlaceholderRelic(), TheAncient.Enums.COLOR_ANCIENT_YELLOW);
         BaseMod.addRelicToCustomPool(new BottledPlaceholderRelic(), TheAncient.Enums.COLOR_ANCIENT_YELLOW);
         BaseMod.addRelicToCustomPool(new DefaultClickableRelic(), TheAncient.Enums.COLOR_ANCIENT_YELLOW);
+        BaseMod.addRelicToCustomPool(new InsigniaOfThePharaoh(), TheAncient.Enums.COLOR_ANCIENT_YELLOW);
         
         // This adds a relic to the Shared pool. Every character can find this relic.
         BaseMod.addRelic(new PlaceholderRelic2(), RelicType.SHARED);

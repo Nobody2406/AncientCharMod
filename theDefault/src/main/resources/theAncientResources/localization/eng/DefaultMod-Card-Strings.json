@@ -53,5 +53,13 @@
   "theAncient:TestCard": {
     "NAME": "Test",
     "DESCRIPTION": "Deal !D! damage."
+  },
+  "theAncient:Proclamation": {
+    "NAME": "Proclamation",
+    "DESCRIPTION": "Draw !theAncient:SecondMagic! cards. NL Gain !M! Prestige."
+  },
+  "theAncient:HumanShield": {
+    "NAME": "Human Shield",
+    "DESCRIPTION": "Gain !M! Plated Armor. NL Lose !theAncient:SecondMagic! Prestige."
   }
 }
