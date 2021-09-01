@@ -5,11 +5,13 @@ import com.megacrit.cardcrawl.actions.AbstractGameAction;
 import com.megacrit.cardcrawl.actions.common.ApplyPowerAction;
 import com.megacrit.cardcrawl.actions.common.DamageAction;
 import com.megacrit.cardcrawl.actions.common.DrawCardAction;
+import com.megacrit.cardcrawl.actions.defect.GashAction;
 import com.megacrit.cardcrawl.cards.DamageInfo;
 import com.megacrit.cardcrawl.characters.AbstractPlayer;
 import com.megacrit.cardcrawl.dungeons.AbstractDungeon;
 import com.megacrit.cardcrawl.monsters.AbstractMonster;
 import theAncient.DefaultMod;
+import theAncient.actions.FameAction;
 import theAncient.characters.TheAncient;
 import theAncient.characters.TheAncient;
 import theAncient.powers.CommonPower;
@@ -46,6 +48,7 @@ public class Proclamation extends AbstractDynamicCard {
     private static final int PRESTIGE = 2;    // DAMAGE = 0
     private static final int CARDS = 1;    // DAMAGE = 0
     private static final int UPGRADE_PLUS_CARDS = 1;    // DAMAGE = 0
+    private static final int FAME = 1;    // DAMAGE = 0
 
     // /STAT DECLARATION/
 
@@ -64,6 +67,8 @@ public class Proclamation extends AbstractDynamicCard {
 
         AbstractDungeon.actionManager.addToBottom(new ApplyPowerAction(p, p,
                 new PrestigePower(p, p, magicNumber), magicNumber));
+
+        this.addToBot(new FameAction(this, this.FAME));
     }
 
     // Upgraded stats.

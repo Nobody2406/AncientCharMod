@@ -56,7 +56,7 @@
   },
   "theAncient:Proclamation": {
     "NAME": "Proclamation",
-    "DESCRIPTION": "Draw !theAncient:SecondMagic! cards. NL Gain !M! Prestige."
+    "DESCRIPTION": "Draw !theAncient:SecondMagic! cards. NL Gain !M! Prestige. NL Increase the Prestige of ALL Proclamation cards by 1 this combat."
   },
   "theAncient:HumanShield": {
     "NAME": "Human Shield",

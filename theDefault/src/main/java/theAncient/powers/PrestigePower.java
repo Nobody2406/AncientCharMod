@@ -20,8 +20,6 @@ import theAncient.util.TextureLoader;
 
 import static theAncient.DefaultMod.makePowerPath;
 
-//Gain 1 dex for the turn for each card played.
-
 public class PrestigePower<amount> extends AbstractPower implements CloneablePowerInterface {
     public AbstractCreature source;
 
@@ -51,7 +49,6 @@ public class PrestigePower<amount> extends AbstractPower implements CloneablePow
         if (this.amount <= -50) {
             this.amount = -50;
         }
-
         this.source = source;
 
         type = PowerType.BUFF;
@@ -69,6 +66,32 @@ public class PrestigePower<amount> extends AbstractPower implements CloneablePow
     public void playApplyPowerSfx() {
         CardCrawlGame.sound.play("POWER_MANTRA", 0.05F);
     }
+    public void stackPower(int stackAmount){
+        this.fontScale = 8.0F;
+        this.amount += stackAmount;
+
+        if (this.amount >= 50) {
+            this.amount = 50;
+        }
+
+        if (this.amount <= -50) {
+            this.amount = -50;
+        }
+    }
+
+    public void reducePower(int reduceAmount) {
+        this.fontScale = 8.0F;
+        this.amount -= reduceAmount;
+
+        if (this.amount >= 50) {
+            this.amount = 50;
+        }
+
+        if (this.amount <= -50) {
+            this.amount = -50;
+        }
+    }
+
 
     public void atStartOfTurnPostDraw() {
         this.addToBot(new AbstractGameAction() {
@@ -83,12 +106,19 @@ public class PrestigePower<amount> extends AbstractPower implements CloneablePow
     });
     }
 
-    public void atEndOfTurnPreEndTurnCards(boolean isPlayer) {
-        if (this.amount < 0) {
+    public void atEndOfTurn(boolean isPlayer) {
+        if (PrestigePower.this.amount < 0) {
             this.flash();
-            this.addToBot(new DamageAction(AbstractDungeon.player, new DamageInfo(AbstractDungeon.player, amount * MULTIPLIER, DamageInfo.DamageType.THORNS), AbstractGameAction.AttackEffect.FIRE));
+            this.addToBot(new DamageAction(AbstractDungeon.player, new DamageInfo(AbstractDungeon.player, PrestigePower.this.amount * MULTIPLIER, DamageInfo.DamageType.THORNS), AbstractGameAction.AttackEffect.FIRE));
         }
     }
+
+    @Override
+    public void updateDescription() {
+        description = DESCRIPTIONS[0];
+    }
+
+
     @Override
     public AbstractPower makeCopy() {
         return new PrestigePower(owner, source, amount);
