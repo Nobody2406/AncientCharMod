@@ -2,6 +2,7 @@ package theAncient.cards;
 
 import basemod.AutoAdd;
 import com.megacrit.cardcrawl.actions.AbstractGameAction;
+import com.megacrit.cardcrawl.actions.common.ApplyPowerAction;
 import com.megacrit.cardcrawl.actions.common.AttackDamageRandomEnemyAction;
 import com.megacrit.cardcrawl.actions.common.DamageAction;
 import com.megacrit.cardcrawl.actions.common.DamageAllEnemiesAction;
@@ -13,6 +14,7 @@ import com.megacrit.cardcrawl.localization.CardStrings;
 import com.megacrit.cardcrawl.monsters.AbstractMonster;
 import theAncient.DefaultMod;
 import theAncient.characters.TheAncient;
+import theAncient.powers.PrestigePower;
 
 import static theAncient.DefaultMod.makeCardPath;
 
@@ -47,7 +49,7 @@ public class Whipping extends AbstractDynamicCard {
     private static final int SINGLE = 7;
     private static final int UPGRADE_PLUS_SINGLE = 2;
 
-
+    private static final int PRESTIGE = -4;
 
     // /STAT DECLARATION/
 
@@ -108,6 +110,10 @@ public class Whipping extends AbstractDynamicCard {
             }
 
         }
+
+        AbstractDungeon.actionManager.addToBottom(new ApplyPowerAction(p, p,
+                new PrestigePower(p, p, PRESTIGE), PRESTIGE));
+
     }
 
     // Upgraded stats.

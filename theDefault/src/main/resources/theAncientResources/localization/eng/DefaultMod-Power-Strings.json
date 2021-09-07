@@ -10,5 +10,13 @@
 "theAncient:PrestigePower": {
         "NAME": "Prestige",
         "DESCRIPTIONS": ["Gain 1 Mantra per 5 Prestige at the start of your turn. NL Take damage equal to negative Prestige at the end of your turn."]
+        },
+"theAncient:DrawReductionSingleTurnPower": {
+        "NAME": "Reduced Draw",
+        "DESCRIPTIONS": ["Draw " , " less card at the start of your next turn." , " less cards at the start of your next turn."]
+        },
+        "theAncient:ContaminatePower": {
+                "NAME": "Contaminate",
+                "DESCRIPTIONS": ["Pestilence affects ALL enemies."]
         }
 }

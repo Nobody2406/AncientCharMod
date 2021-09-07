@@ -64,7 +64,12 @@
   },
   "theAncient:Whipping": {
     "NAME": "Whipping",
-    "DESCRIPTION": "Deal !theAncient:SecondMagic! damage. Deal !D! damage to a random enemy.",
-    "UPGRADE_DESCRIPTION": "Deal !theAncient:SecondMagic! damage. Deal !D! damage to ALL enemies."
+    "DESCRIPTION": "Deal !theAncient:SecondMagic! damage. Deal !D! damage to a random enemy. NL Lose 4 Prestige.",
+    "UPGRADE_DESCRIPTION": "Deal !theAncient:SecondMagic! damage. Deal !D! damage to ALL enemies. NL Lose 4 Prestige."
+  },
+  "theAncient:ReleasePower": {
+    "NAME": "Release Power",
+    "DESCRIPTION": "Retain. NL Evoke your first orb and lose 1 orbslot. NL If this card is retained, draw 1 less card next turn. NL Exhaust.",
+    "UPGRADE_DESCRIPTION": "Retain. NL Evoke your first orb once per enemy and lose 1 orbslot. NL If this card is retained, draw 1 less card next turn. NL Exhaust."
   }
 }
