@@ -61,5 +61,10 @@
   "theAncient:HumanShield": {
     "NAME": "Human Shield",
     "DESCRIPTION": "Gain !M! Plated Armor. NL Lose !theAncient:SecondMagic! Prestige."
+  },
+  "theAncient:Whipping": {
+    "NAME": "Whipping",
+    "DESCRIPTION": "Deal !theAncient:SecondMagic! damage. Deal !D! damage to a random enemy.",
+    "UPGRADE_DESCRIPTION": "Deal !theAncient:SecondMagic! damage. Deal !D! damage to ALL enemies."
   }
 }
