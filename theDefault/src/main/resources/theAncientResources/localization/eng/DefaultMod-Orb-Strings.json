@@ -8,5 +8,13 @@
       " NL #yEvoke: Deal #b",
       " damage to all enemies."
     ]
-  }
+  },"theAncient:Pestilence": {
+  "NAME": "Pestilence",
+  "DESCRIPTION": [
+    "#yPassive: At the end of your turn, apply #b",
+    " Poison to a random enemy and lose 1 Prestige.",
+    " NL #yEvoke: Apply #b",
+    " Poison to a random enemy and lose 1 Prestige."
+  ]
+}
 }

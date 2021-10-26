@@ -71,5 +71,13 @@
     "NAME": "Release Power",
     "DESCRIPTION": "Retain. NL Evoke your first orb and lose 1 orbslot. NL If this card is retained, draw 1 less card next turn. NL Exhaust.",
     "UPGRADE_DESCRIPTION": "Retain. NL Evoke your first orb once per enemy and lose 1 orbslot. NL If this card is retained, draw 1 less card next turn. NL Exhaust."
-  }
+  },
+  "theAncient:Contaminate": {
+    "NAME": "Contaminate",
+    "DESCRIPTION": "Pestilence affects ALL enemies. Channel !M! Pestilence Orbs."
+  },
+  "theAncient:Pestilence": {
+  "NAME": "Pestilence",
+  "DESCRIPTION": "Gain !theAncient:SecondMagic! Orb Slot and Channel !M! Pestilence. NL Add 1 Release Power to your hand."
+}
 }

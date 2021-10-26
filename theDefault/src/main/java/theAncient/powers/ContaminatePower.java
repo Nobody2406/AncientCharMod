@@ -20,7 +20,7 @@ import theAncient.util.TextureLoader;
 
 import static theAncient.DefaultMod.makePowerPath;
 
-public class ContaminatePower extends AbstractPower implements CloneablePowerInterface {
+public class ContaminatePower extends AbstractPower {
     public AbstractCreature source;
 
     public static final String POWER_ID = DefaultMod.makeID("ContaminatePower");
@@ -35,9 +35,9 @@ public class ContaminatePower extends AbstractPower implements CloneablePowerInt
 
 
 
-    public ContaminatePower(final AbstractCreature owner, final AbstractCreature source, final int amount) {
+    public ContaminatePower(final AbstractCreature owner) {
         name = NAME;
-        ID = POWER_ID;
+        this.ID = POWER_ID;
         this.owner = owner;
         this.source = source;
         this.loadRegion("mastery");
@@ -54,12 +54,6 @@ public class ContaminatePower extends AbstractPower implements CloneablePowerInt
     @Override
     public void updateDescription() {
         description = DESCRIPTIONS[0];
-    }
-
-
-    @Override
-    public AbstractPower makeCopy() {
-        return new ContaminatePower(owner, source, amount);
     }
 
 }
