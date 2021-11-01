@@ -1,5 +1,6 @@
 package theAncient.cards;
 
+import basemod.AutoAdd;
 import com.megacrit.cardcrawl.actions.defect.ChannelAction;
 import com.megacrit.cardcrawl.characters.AbstractPlayer;
 import com.megacrit.cardcrawl.core.CardCrawlGame;

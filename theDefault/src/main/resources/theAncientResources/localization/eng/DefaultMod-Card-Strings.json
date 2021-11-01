@@ -79,5 +79,10 @@
   "theAncient:Pestilence": {
   "NAME": "Pestilence",
   "DESCRIPTION": "Gain !theAncient:SecondMagic! Orb Slot and Channel !M! Pestilence. NL Add 1 Release Power to your hand."
-}
+},
+  "theAncient:Propaganda": {
+    "NAME": "Propaganda",
+    "DESCRIPTION": "At the start of your turn, play a Proclamation.",
+    "UPGRADE_DESCRIPTION": "Innate. NL At the start of your turn, play a Proclamation."
+  }
 }

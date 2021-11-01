@@ -45,7 +45,8 @@ public class Proclamation extends AbstractDynamicCard {
     private static final int COST = 1;  // COST = 1
     private static final int UPGRADED_COST = 1; // UPGRADED_COST = 1
 
-    private static final int PRESTIGE = 2;    // DAMAGE = 0
+    private static final int PRESTIGE = 1;    // DAMAGE = 0
+    private static final int UPGRADE_PLUS_PRESTIGE = 1;
     private static final int CARDS = 1;    // DAMAGE = 0
     private static final int UPGRADE_PLUS_CARDS = 1;    // DAMAGE = 0
     private static final int FAME = 1;    // DAMAGE = 0
@@ -76,6 +77,7 @@ public class Proclamation extends AbstractDynamicCard {
     public void upgrade() {
         if (!upgraded) {
             upgradeName();
+            this.upgradeMagicNumber(UPGRADE_PLUS_PRESTIGE);
             this.upgradeDefaultSecondMagicNumber(UPGRADE_PLUS_CARDS);
             initializeDescription();
         }

@@ -18,5 +18,9 @@
         "theAncient:ContaminatePower": {
                 "NAME": "Contaminate",
                 "DESCRIPTIONS": ["Pestilence affects ALL enemies."]
+        },
+        "theAncient:PropagandaPower": {
+                "NAME": "Propaganda",
+                "DESCRIPTIONS": ["At the start of your turn, play #b", " Proclamation." , " Proclamations."]
         }
 }

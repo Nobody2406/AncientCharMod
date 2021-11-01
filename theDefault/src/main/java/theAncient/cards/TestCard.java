@@ -1,5 +1,6 @@
 package theAncient.cards;
 
+import basemod.AutoAdd;
 import com.megacrit.cardcrawl.actions.AbstractGameAction;
 import com.megacrit.cardcrawl.actions.common.DamageAction;
 import com.megacrit.cardcrawl.cards.DamageInfo;
@@ -12,7 +13,7 @@ import theAncient.characters.TheAncient;
 import static theAncient.DefaultMod.makeCardPath;
 
 // public class TestCard extends AbstractDynamicCard
-
+@AutoAdd.Ignore
 public class TestCard extends AbstractDynamicCard {
 
     /*
